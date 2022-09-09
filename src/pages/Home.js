@@ -22,7 +22,7 @@ console.log(scrollBarPosition)
 			<img className={(scrollBarPosition > 100) ? "spiral disappear-element" : "spiral appear-element"} src={spiral} alt="" />
 			<img className={(scrollBarPosition > 100) ? "rectangle disappear-element" : "rectangle appear-element"} src={rectangle} alt="" />
       <p className={(scrollBarPosition > 100) ? "specialisation-frontend appear-element" : "specialisation-frontend disappear-element"}>Spécialisation Front-end</p>
-      <p className={(scrollBarPosition > 300) ? "integration appear-element" : "integration disappear-element"}>Intégration de qualité</p>
+      <p className={(scrollBarPosition > 300 && scrollBarPosition < 500) ? "integration appear-element" : "integration disappear-element"}>Intégration de qualité</p>
 			<img className="scroll" src={scroll} alt="" />
 		</div>
 	);
