@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+
 body {
   height: 9000px;
   -ms-overflow-style: none;
@@ -12,6 +13,7 @@ body::-webkit-scrollbar {
   display: none;
   /* for Chrome, Safari, and Opera */
 }
+
 .home {
   position: fixed;
   font-family: 'Krona One', sans-serif;
@@ -23,6 +25,8 @@ body::-webkit-scrollbar {
   display: flex;
   justify-content: center;
   scrollbar-width: none;
+  color: #fefefe;
+  font-size: 30px;
 
   .spiral {
     position: absolute;
@@ -48,22 +52,42 @@ body::-webkit-scrollbar {
     right: 61px;
   }
 
-  .devInNet {
+  .devinnet {
     text-transform: uppercase;
     text-align: center;
-    color: #fefefe;
     padding-top: 18px;
-    font-size: 36px;
+    font-size: 32px;
     z-index: 4;
   }
 
   .description {
     position: absolute;
-    color: #fefefe;
+
     top: 25%;
     left: 25%;
     font-size: 4vw;
     width: 20vw;
     z-index: 4;
   }
+
+  .specialisation-frontend {
+    position: fixed;
+    bottom: 50%;
+  }
+
+  .integration{
+    position: fixed;
+    bottom: 20%;
+    left: 10%;
+  }
+}
+
+.appear-element {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.disappear-element{
+  opacity: 0;
+  transition: 0.5s;
 }
