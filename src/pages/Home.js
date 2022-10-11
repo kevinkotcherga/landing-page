@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import '../style/home.scss';
-import scroll from '../img/scroll.png';
+
 import spiral from '../img/spiral.png';
 import rectangle from '../img/rectangle.png';
+import Scroll from '../components/Scroll';
 
 const Home = () => {
 	const [scrollBarPosition, setScrollBarPosition] = useState('');
@@ -19,7 +20,7 @@ const Home = () => {
 			<h1 className="devinnet">Devinnet</h1>
 			<p
 				className={
-					scrollBarPosition > 100
+					scrollBarPosition > 500
 						? 'description disappear-element'
 						: 'description appear-element'
 				}
@@ -37,8 +38,8 @@ const Home = () => {
 			/>
 			<img
 				className={
-					scrollBarPosition > 100
-						? 'rectangle disappear-element'
+					scrollBarPosition > 600 && scrollBarPosition < 3050
+						? 'rectangle large-rectangle'
 						: 'rectangle appear-element'
 				}
 				src={rectangle}
@@ -46,7 +47,7 @@ const Home = () => {
 			/>
 			<p
 				className={
-					scrollBarPosition > 100
+					scrollBarPosition > 650 && scrollBarPosition < 3050
 						? 'specialisation-frontend appear-element'
 						: 'specialisation-frontend disappear-element'
 				}
@@ -55,7 +56,7 @@ const Home = () => {
 			</p>
 			<p
 				className={
-					scrollBarPosition > 500
+					scrollBarPosition > 950 && scrollBarPosition < 2150
 						? 'integration appear-element'
 						: 'integration disappear-element'
 				}
@@ -64,14 +65,68 @@ const Home = () => {
 			</p>
 			<p
 				className={
-					scrollBarPosition > 700
+					scrollBarPosition > 1250 && scrollBarPosition < 2150
 						? 'template-dynamique appear-element'
 						: 'template-dynamique disappear-element'
 				}
 			>
 				Templates dynamique
 			</p>
-			<img className="scroll" src={scroll} alt="" />
+			<p
+				className={
+					scrollBarPosition > 1550 && scrollBarPosition < 2150
+						? 'pixel-perfect appear-element'
+						: 'pixel-perfect disappear-element'
+				}
+			>
+				Pixel perfect
+			</p>
+			<p
+				className={
+					scrollBarPosition > 1850 && scrollBarPosition < 2150
+						? 'code-propre appear-element'
+						: 'code-propre disappear-element'
+				}
+			>
+				Code propre
+			</p>
+			<p
+				className={
+					scrollBarPosition > 2150 && scrollBarPosition < 3050
+						? 'experience appear-element'
+						: 'experience disappear-element'
+				}
+			>
+				Une équipe passionnés
+			</p>
+			<p
+				className={
+					scrollBarPosition > 2450 && scrollBarPosition < 3050
+						? 'avec-plus-de appear-element'
+						: 'avec-plus-de disappear-element'
+				}
+			>
+				avec plus de
+			</p>
+			<p
+				className={
+					scrollBarPosition > 2750 && scrollBarPosition < 3050
+						? 'passionnes appear-element'
+						: 'passionnes disappear-element'
+				}
+			>
+				10 ans d'experience
+			</p>
+			<p
+				className={
+					scrollBarPosition > 3100
+						? 'contact appear-element'
+						: 'contact disappear-element'
+				}
+			>
+				Wesh la famille
+			</p>
+			<Scroll scrollBarPosition={scrollBarPosition} />
 		</div>
 	);
 };

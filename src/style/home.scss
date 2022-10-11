@@ -44,7 +44,12 @@ body::-webkit-scrollbar {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
+  }
 
+  .large-rectangle {
+    height: 110vh;
+    width: 110vw;
+    transition: 0.5s;
   }
 
   .scroll {
@@ -63,7 +68,6 @@ body::-webkit-scrollbar {
 
   .description {
     position: absolute;
-
     top: 25%;
     left: 25%;
     font-size: 4vw;
@@ -74,18 +78,64 @@ body::-webkit-scrollbar {
   .specialisation-frontend {
     position: fixed;
     bottom: 50%;
+    font-size: 3vw;
   }
 
   .integration{
     position: fixed;
     bottom: 20%;
     left: 10%;
+    font-size: 3vw;
   }
 
   .template-dynamique {
     position: fixed;
     bottom: 20%;
     right: 10%;
+    font-size: 1.5vw;
+  }
+
+  .pixel-perfect {
+    position: fixed;
+    top: 20%;
+    right: 10%;
+    font-size: 2vw;
+  }
+
+  .code-propre {
+    position: fixed;
+    top: 20%;
+    left: 10%;
+    font-size: 3vw;
+  }
+
+  .experience {
+    position: fixed;
+    top: 60%;
+    left: 10%;
+    font-size: 1.5vw;
+  }
+
+  .avec-plus-de {
+    position: fixed;
+    top: 60%;
+    left: 43%;
+    font-size: 1.5vw;
+  }
+
+  .passionnes {
+    position: fixed;
+    top: 60%;
+    right: 10%;
+    font-size: 1.5vw;
+  }
+
+  .contact {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    font-size: 4vw;
+    width: 20vw;
   }
 }
 
