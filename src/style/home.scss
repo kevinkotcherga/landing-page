@@ -7,6 +7,7 @@ body {
     scrollbar-width: none;
     /* for Firefox */
     overflow-y: scroll;
+    text-transform: uppercase;
 }
 
 body::-webkit-scrollbar {
@@ -79,6 +80,12 @@ body::-webkit-scrollbar {
     position: fixed;
     bottom: 20%;
     left: 10%;
+  }
+
+  .template-dynamique {
+    position: fixed;
+    bottom: 20%;
+    right: 10%;
   }
 }
 
