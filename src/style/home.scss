@@ -112,30 +112,24 @@ body::-webkit-scrollbar {
       }
     }
 
-    // .devinnet-fix {
-    //   position: fixed;
-    //   display: flex;
-    //   top: 50%;
-    //   left: 50%;
-    //   transform: translate(-50%, -50%);
-    //   z-index: 10;
-    //   font-size: 5vw;
-    // }
-
   .devinnet-developpons {
     display: flex;
     position: absolute;
     top: 50%;
-    transform: perspective(1px) translateY(-50%);
+    transform: translateY(-50%);
     right: -26vw;
   }
 
-    .devinnet-developpons-move {
-      z-index: 99;
-      display: flex;
-      transition: 3s;
-      transform: translate(200px, 200px);
-    }
+  .devinnet-developpons-move {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -26vw;
+    transform: translate(-20vw, -20vh);
+    transition: 5s;
+    z-index: 99;
+  }
 
     .devinnet-internet {
       display: flex;
