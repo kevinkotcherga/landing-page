@@ -2,6 +2,12 @@ import React from 'react';
 import '../style/scroll.scss';
 
 const Scroll = ({ scrollBarPosition }) => {
+	setTimeout(() => {
+		let scroll = document.querySelector('.scroll');
+		scroll.classList.remove('scroll');
+		scroll.classList.add('scroll');
+	}, 3000);
+
 	return (
 		<div
 			className={

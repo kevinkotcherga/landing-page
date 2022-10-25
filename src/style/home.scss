@@ -26,7 +26,6 @@ body::-webkit-scrollbar {
   display: flex;
   scrollbar-width: none;
   color: #fefefe;
-  font-size: 30px;
 
   .spiral {
     opacity: 0.6;
@@ -46,21 +45,21 @@ body::-webkit-scrollbar {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 99;
-    font-size: 3.5vw;
+    font-size: 5.5vw;
   }
 
   .left {
     position: relative;
     height: 100%;
     width: 50%;
-    background-color: greenyellow;
+    // background-color: greenyellow;
   }
 
   .right {
     position: relative;
     height: 100%;
     width: 50%;
-    background-color: blue;
+    // background-color: blue;
   }
 
   // .container {
@@ -111,7 +110,7 @@ body::-webkit-scrollbar {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: -24.6vw;
+    right: -38.8vw;
   }
 
   .devinnet-developpons-move {
@@ -120,7 +119,7 @@ body::-webkit-scrollbar {
     top: 50%;
     transform: translateY(-50%);
     right: -26vw;
-    transform: translate(-20vw, -20vh);
+    transform: translate(1vw, -15vh);
     transition: 5s;
     z-index: 99;
   }
@@ -130,7 +129,7 @@ body::-webkit-scrollbar {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 28.8vw;
+    left: 28.1vw;
   }
 
   .devinnet-internet-move {
@@ -139,7 +138,7 @@ body::-webkit-scrollbar {
     top: 50%;
     transform: translateY(-50%);
     left: 28.8vw;
-    transform: translate(-28vw, -10vh);
+    transform: translate(-26.5vw, -2vh);
     transition: 5s;
     z-index: 99;
   }
