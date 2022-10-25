@@ -59,20 +59,47 @@ body::-webkit-scrollbar {
   }
 
   .devinnet {
-    text-transform: uppercase;
-    text-align: center;
-    padding-top: 18px;
-    font-size: 32px;
-    z-index: 4;
+    position: fixed;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    animation-duration: 1s;
+    animation-name: clignoter;
+    animation-iteration-count: infinite;
+    transition: none;
+    transition: 1s;
+    font-size: 50px;
   }
 
-  .description {
-    position: absolute;
-    top: 25%;
-    left: 25%;
-    font-size: 4vw;
-    width: 20vw;
-    z-index: 4;
+    @keyframes clignoter {
+      0% {
+        opacity: 1;
+      }
+
+      40% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+  .devinnet-active {
+    display: flex;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    transition: 1s;
+    font-size: 50px;
+  }
+
+  .devinnet-description-disappear {
+    opacity: 0;
   }
 
   .specialisation-frontend {
@@ -139,12 +166,29 @@ body::-webkit-scrollbar {
   }
 }
 
+.surrounded {
+  border: 10px solid white;
+  border-radius: 50px;
+  padding: 5px 20px;
+}
+
 .appear-element {
   opacity: 1;
   transition: 0.5s;
 }
 
-.disappear-element{
+.disappear-element {
   opacity: 0;
   transition: 0.5s;
+}
+
+.devinnet-description {
+  width: 0;
+  opacity: 0;
+}
+
+.devinnet-description-appaer {
+  width: 100%;
+  opacity: 1;
+  transition: 5s;
 }

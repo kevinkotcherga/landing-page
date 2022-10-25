@@ -13,20 +13,34 @@ const Home = () => {
 		setScrollBarPosition(scroll);
 	});
 
-	console.log(scrollBarPosition);
+	setTimeout(() => {
+		let devinnet = document.querySelector('#devinnet');
+		let devinnetDescription = document.querySelector('.devinnet-description');
+		devinnet.classList.add('devinnet-active');
+		devinnet.classList.remove('devinnet');
+		devinnetDescription.classList.add('devinnet-description-appaer');
+		devinnetDescription.classList.remove('devinnet-description');
+	}, 3000);
 
 	return (
 		<div id="home" className="home">
-			<h1 className="devinnet">Devinnet</h1>
-			<p
+			<div id="devinnet" className="devinnet">
+				Dev
+				<div className="devinnet-description">eloppons</div>
+				in
+				<div className="devinnet-description">ter</div>net
+			</div>
+			{/* <p
 				className={
 					scrollBarPosition > 500
 						? 'description disappear-element'
 						: 'description appear-element'
 				}
 			>
-				NOUS DÉVELOPPONS VOS SOLUTIONS NUMERIQUES
-			</p>
+				<span className="surrounded">Dév</span>eloppons{' '}
+				<span className="surrounded">in</span>ter
+				<span className="surrounded">net</span>
+			</p> */}
 			<img
 				className={
 					scrollBarPosition > 100
