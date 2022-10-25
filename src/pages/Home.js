@@ -14,7 +14,12 @@ const Home = () => {
 	setTimeout(() => {
 		let devinnetDeveloppons = document.querySelector('.devinnet-developpons');
 		devinnetDeveloppons.classList.remove('devinnet-developpons');
+		devinnetDeveloppons.classList.remove('devinnet-flashes');
 		devinnetDeveloppons.classList.add('devinnet-developpons-move');
+		let devinnetInternet = document.querySelector('.devinnet-internet');
+		devinnetInternet.classList.remove('devinnet-internet');
+		devinnetInternet.classList.remove('devinnet-flashes');
+		devinnetInternet.classList.add('devinnet-internet-move');
 	}, 3000);
 
 	setTimeout(() => {
@@ -33,17 +38,14 @@ const Home = () => {
 				}
 			>
 				<div className="left">
-					<div className="devinnet-developpons">
+					<div className="devinnet-developpons devinnet-flashes">
 						Dev<div className="devinnet-slogan-disappear">eloppons</div>
 					</div>
 				</div>
 				<div className="right"></div>
-				{/* <div id="devinnet" className="devinnet"> */}
-
-				{/* <div className="devinnet-internet">
+				<div className="devinnet-internet devinnet-flashes">
 					in<div className="devinnet-slogan-disappear">ter</div>net
-				</div> */}
-				{/* </div> */}
+				</div>
 			</div>
 
 			{/* <p

@@ -86,17 +86,11 @@ body::-webkit-scrollbar {
     right: 61px;
   }
 
-  // .devinnet {
-  //   display: flex;
-  //   top: 50%;
-  //   left: 50%;
-  //   transform: translate(-50%, -50%);
-  //   z-index: 99;
-  //   animation-duration: 1s;
-  //   animation-name: clignoter;
-  //   animation-iteration-count: infinite;
-  //   font-size: 5vw;
-  // }
+  .devinnet-flashes {
+    animation-duration: 1s;
+    animation-name: clignoter;
+    animation-iteration-count: infinite;
+  }
 
     @keyframes clignoter {
       0% {
@@ -117,7 +111,7 @@ body::-webkit-scrollbar {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: -26vw;
+    right: -24.6vw;
   }
 
   .devinnet-developpons-move {
@@ -131,9 +125,24 @@ body::-webkit-scrollbar {
     z-index: 99;
   }
 
-    .devinnet-internet {
-      display: flex;
-    }
+  .devinnet-internet {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 28.8vw;
+  }
+
+  .devinnet-internet-move {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 28.8vw;
+    transform: translate(-28vw, -10vh);
+    transition: 5s;
+    z-index: 99;
+  }
 
     .devinnet-slogan-disappear {
       width: 0%;
