@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import '../style/home.scss';
-
 import spiral from '../img/spiral.png';
-import rectangle from '../img/rectangle.png';
 import Scroll from '../components/Scroll';
 
 const Home = () => {
@@ -14,22 +12,40 @@ const Home = () => {
 	});
 
 	setTimeout(() => {
-		let devinnet = document.querySelector('#devinnet');
-		let devinnetDescription = document.querySelector('.devinnet-description');
-		devinnet.classList.add('devinnet-active');
-		devinnet.classList.remove('devinnet');
-		devinnetDescription.classList.add('devinnet-description-appaer');
-		devinnetDescription.classList.remove('devinnet-description');
+		let devinnetDeveloppons = document.querySelector('.devinnet-developpons');
+		devinnetDeveloppons.classList.remove('devinnet-developpons');
+		devinnetDeveloppons.classList.add('devinnet-developpons-move');
 	}, 3000);
+
+	setTimeout(() => {
+		let devinnetSlogan = document.querySelector('.devinnet-slogan-disappear');
+		devinnetSlogan.classList.add('devinnet-slogan-appear');
+		devinnetSlogan.classList.remove('devinnet-slogan-disappear');
+	}, 5000);
 
 	return (
 		<div id="home" className="home">
-			<div id="devinnet" className="devinnet">
-				Dev
-				<div className="devinnet-description">eloppons</div>
-				in
-				<div className="devinnet-description">ter</div>net
+			<div
+				className={
+					scrollBarPosition > 600 && scrollBarPosition < 3050
+						? 'rectangle large-rectangle'
+						: 'rectangle appear-element'
+				}
+			>
+				<div className="left">
+					<div className="devinnet-developpons">
+						Dev<div className="devinnet-slogan-disappear">eloppons</div>
+					</div>
+				</div>
+				<div className="right"></div>
+				{/* <div id="devinnet" className="devinnet"> */}
+
+				{/* <div className="devinnet-internet">
+					in<div className="devinnet-slogan-disappear">ter</div>net
+				</div> */}
+				{/* </div> */}
 			</div>
+
 			{/* <p
 				className={
 					scrollBarPosition > 500
@@ -50,7 +66,7 @@ const Home = () => {
 				src={spiral}
 				alt=""
 			/>
-			<img
+			{/* <img
 				className={
 					scrollBarPosition > 600 && scrollBarPosition < 3050
 						? 'rectangle large-rectangle'
@@ -58,7 +74,7 @@ const Home = () => {
 				}
 				src={rectangle}
 				alt=""
-			/>
+			/> */}
 			<p
 				className={
 					scrollBarPosition > 650 && scrollBarPosition < 3050

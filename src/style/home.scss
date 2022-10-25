@@ -24,27 +24,55 @@ body::-webkit-scrollbar {
   background-image: url("../img/background.png");
   z-index: 1;
   display: flex;
-  justify-content: center;
   scrollbar-width: none;
   color: #fefefe;
   font-size: 30px;
 
   .spiral {
+    opacity: 0.6;
     position: absolute;
-    z-index: 3;
+    z-index: 2;
     height: 100%;
     width: 100%;
   }
 
   .rectangle {
-    position: absolute;
+    border: 10px solid white;
+    position: fixed;
+    display: flex;
     height: 70vh;
     width: 60vw;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 2;
+    z-index: 99;
+    font-size: 3.5vw;
   }
+
+  .left {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    background-color: greenyellow;
+  }
+
+  .right {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    background-color: blue;
+  }
+
+  // .container {
+  //   position: relative;
+  //   height: 70vh;
+  //   width: 60vw;
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%);
+  //   z-index: 2;
+  //   background-color: red;
+  // }
 
   .large-rectangle {
     height: 110vh;
@@ -58,20 +86,17 @@ body::-webkit-scrollbar {
     right: 61px;
   }
 
-  .devinnet {
-    position: fixed;
-    display: flex;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-    animation-duration: 1s;
-    animation-name: clignoter;
-    animation-iteration-count: infinite;
-    transition: none;
-    transition: 1s;
-    font-size: 50px;
-  }
+  // .devinnet {
+  //   display: flex;
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%);
+  //   z-index: 99;
+  //   animation-duration: 1s;
+  //   animation-name: clignoter;
+  //   animation-iteration-count: infinite;
+  //   font-size: 5vw;
+  // }
 
     @keyframes clignoter {
       0% {
@@ -87,20 +112,46 @@ body::-webkit-scrollbar {
       }
     }
 
-  .devinnet-active {
+    // .devinnet-fix {
+    //   position: fixed;
+    //   display: flex;
+    //   top: 50%;
+    //   left: 50%;
+    //   transform: translate(-50%, -50%);
+    //   z-index: 10;
+    //   font-size: 5vw;
+    // }
+
+  .devinnet-developpons {
     display: flex;
-    position: fixed;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-    transition: 1s;
-    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    transform: perspective(1px) translateY(-50%);
+    right: -26vw;
   }
 
-  .devinnet-description-disappear {
-    opacity: 0;
-  }
+    .devinnet-developpons-move {
+      z-index: 99;
+      display: flex;
+      transition: 3s;
+      transform: translate(200px, 200px);
+    }
+
+    .devinnet-internet {
+      display: flex;
+    }
+
+    .devinnet-slogan-disappear {
+      width: 0%;
+      visibility: hidden;
+    }
+
+    .devinnet-slogan-appear {
+      visibility: visible;
+      overflow: hidden;
+      transition: 5s;
+      width: 100%;
+    }
 
   .specialisation-frontend {
     position: fixed;
@@ -180,15 +231,4 @@ body::-webkit-scrollbar {
 .disappear-element {
   opacity: 0;
   transition: 0.5s;
-}
-
-.devinnet-description {
-  width: 0;
-  opacity: 0;
-}
-
-.devinnet-description-appaer {
-  width: 100%;
-  opacity: 1;
-  transition: 5s;
 }
