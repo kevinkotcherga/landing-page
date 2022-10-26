@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
 
 body {
-  height: 9000px;
+  height: 21000px;
   -ms-overflow-style: none;
     /* for Internet Explorer, Edge */
     scrollbar-width: none;
@@ -28,15 +28,24 @@ body::-webkit-scrollbar {
   color: #fefefe;
 
   .spiral {
-    opacity: 0.6;
+    opacity: 0.4;
     position: absolute;
     z-index: 2;
     height: 100%;
     width: 100%;
   }
 
+  .spiral-disappear {
+    opacity: 0;
+    position: absolute;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    transition: opacity 2s;
+  }
+
   .rectangle {
-    border: 10px solid white;
+    border: 0.6vmax solid white;
     position: fixed;
     display: flex;
     height: 70vh;
@@ -77,27 +86,11 @@ body::-webkit-scrollbar {
   //   bottom: 0;
   // }
 
-  // .container {
-  //   position: relative;
-  //   height: 70vh;
-  //   width: 60vw;
-  //   top: 50%;
-  //   left: 50%;
-  //   transform: translate(-50%, -50%);
-  //   z-index: 2;
-  //   background-color: red;
-  // }
-
   .large-rectangle {
     height: 110vh;
     width: 110vw;
+    opacity: 0;
     transition: 0.5s;
-  }
-
-  .scroll {
-    position: absolute;
-    bottom: 48px;
-    right: 61px;
   }
 
   .devinnet-flashes {
@@ -142,6 +135,17 @@ body::-webkit-scrollbar {
     font-size: 5vmax;
   }
 
+  .devinnet-developpons-stop-transition {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 25vmin;
+    transform: translateY(-50%);
+    left: 3vmax;
+    z-index: 99;
+    font-size: 5vmax;
+  }
+
   .devinnet-internet {
     display: flex;
     position: absolute;
@@ -164,6 +168,17 @@ body::-webkit-scrollbar {
     font-size: 5vmax;
   }
 
+  .devinnet-internet-stop-transition {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    top: 45vmin;
+    transform: translateY(-50%);
+    left: 3vmax;
+    z-index: 99;
+    font-size: 5vmax;
+  }
+
     .devinnet-slogan-disappear {
       width: 0%;
       visibility: hidden;
@@ -172,8 +187,8 @@ body::-webkit-scrollbar {
     .devinnet-slogan-appear {
       visibility: visible;
       overflow: hidden;
-      transition: 4s;
       width: 100%;
+      transition: width 4s;
     }
 
   .specialisation-frontend {
@@ -244,22 +259,20 @@ body::-webkit-scrollbar {
   border: 0.4vmax solid white;
   border-radius: 2.5vmax;
   padding: 2px 15px;
-  transition: 0.3s ease-out;
+  transition:border 0.2s ease-out;
 }
 
 .surrounded-disappear {
-  border: 0.4vmax solid transparent;
-  border-radius: 2.5vmax;
-  transition: 1s ease-out;
-  // padding: 2px 15px;
+  padding: 0.4vmax;
+  transition: padding 3s;
 }
 
 .appear-element {
   opacity: 1;
-  transition: 0.5s;
+  transition: opacity 1s;
 }
 
 .disappear-element {
   opacity: 0;
-  transition: 0.5s;
+  transition: opacity 1s;
 }

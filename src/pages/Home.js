@@ -11,177 +11,143 @@ const Home = () => {
 		setScrollBarPosition(scroll);
 	});
 
-	setTimeout(() => {
-		let devinnetDeveloppons = document.querySelector('.devinnet-developpons');
-		let devinnetInternet = document.querySelector('.devinnet-internet');
-		let surrounded = document.querySelector('.surrounded');
-		let surrounded2 = document.querySelector('.surrounded-2');
-		let surrounded3 = document.querySelector('.surrounded-3');
-		devinnetDeveloppons.classList.remove(
-			'devinnet-developpons',
-			'devinnet-flashes',
-		);
-		devinnetDeveloppons.classList.add('devinnet-developpons-move');
-		devinnetInternet.classList.remove('devinnet-internet', 'devinnet-flashes');
-		devinnetInternet.classList.add('devinnet-internet-move');
-		surrounded.classList.add('surrounded-disappear');
-		surrounded2.classList.add('surrounded-disappear');
-		surrounded3.classList.add('surrounded-disappear');
-	}, 3000);
+	if (scrollBarPosition < 100) {
+		setTimeout(() => {
+			let devinnetDeveloppons = document.querySelector('.devinnet-developpons');
+			let devinnetInternet = document.querySelector('.devinnet-internet');
+			let surrounded = document.querySelector('.surrounded');
+			let surrounded2 = document.querySelector('.surrounded-2');
+			let surrounded3 = document.querySelector('.surrounded-3');
+			devinnetDeveloppons.classList.add('devinnet-developpons-move');
+			devinnetDeveloppons.classList.remove(
+				'devinnet-developpons',
+				'devinnet-flashes',
+			);
+			devinnetInternet.classList.add('devinnet-internet-move');
+			devinnetInternet.classList.remove(
+				'devinnet-internet',
+				'devinnet-flashes',
+			);
+			surrounded.classList.add('surrounded-disappear');
+			surrounded2.classList.add('surrounded-disappear');
+			surrounded3.classList.add('surrounded-disappear');
+		}, 3000);
 
-	setTimeout(() => {
-		let devinnetSlogan = document.querySelector('.devinnet-slogan-disappear');
-		devinnetSlogan.classList.remove('devinnet-slogan-disappear');
-		devinnetSlogan.classList.add('devinnet-slogan-appear');
-	}, 8000);
+		setTimeout(() => {
+			let devinnetSlogan = document.querySelector('.devinnet-slogan-disappear');
+			let devinnetDeveloppons = document.querySelector(
+				'.devinnet-developpons-move',
+			);
+			let devinnetInternet = document.querySelector('.devinnet-internet-move');
+			devinnetSlogan.classList.add('devinnet-slogan-appear');
+			devinnetSlogan.classList.remove('devinnet-slogan-disappear');
+			devinnetDeveloppons.classList.add('devinnet-developpons-stop-transition');
+			devinnetDeveloppons.classList.remove('devinnet-developpons-move');
+			devinnetInternet.classList.add('devinnet-internet-stop-transition');
+			devinnetInternet.classList.remove('devinnet-internet-move');
+		}, 8000);
 
-	setTimeout(() => {
-		let surrounded = document.querySelector('.surrounded');
-		surrounded.classList.remove('surrounded-disappear');
-		surrounded.classList.add('surrounded-appear');
-	}, 11000);
+		setTimeout(() => {
+			let surrounded = document.querySelector('.surrounded');
+			surrounded.classList.remove('surrounded-disappear');
+			surrounded.classList.add('surrounded-appear');
+		}, 10500);
 
-	setTimeout(() => {
-		let surrounded2 = document.querySelector('.surrounded-2');
-		surrounded2.classList.remove('surrounded-disappear');
-		surrounded2.classList.add('surrounded-appear');
-	}, 11500);
+		setTimeout(() => {
+			let surrounded2 = document.querySelector('.surrounded-2');
+			surrounded2.classList.remove('surrounded-disappear');
+			surrounded2.classList.add('surrounded-appear');
+		}, 10900);
 
-	setTimeout(() => {
-		let surrounded3 = document.querySelector('.surrounded-3');
-		surrounded3.classList.remove('surrounded-disappear');
-		surrounded3.classList.add('surrounded-appear');
-	}, 12000);
+		setTimeout(() => {
+			let surrounded3 = document.querySelector('.surrounded-3');
+			surrounded3.classList.remove('surrounded-disappear');
+			surrounded3.classList.add('surrounded-appear');
+		}, 11300);
+	}
 
 	return (
 		<div id="home" className="home">
 			<div
 				className={
-					scrollBarPosition > 600 && scrollBarPosition < 3050
+					scrollBarPosition > 4000 && scrollBarPosition < 20000
 						? 'rectangle large-rectangle'
 						: 'rectangle appear-element'
 				}
 			>
 				<div className="top"></div>
 				<div className="bottom"></div>
-				<div className="left">
+				<div
+					className={
+						scrollBarPosition > 2000
+							? 'left disappear-element'
+							: 'left appear-element'
+					}
+				>
 					<div className="devinnet-developpons devinnet-flashes">
 						<span className="surrounded">Dev</span>
 						<div className="devinnet-slogan-disappear">eloppons</div>
 					</div>
 				</div>
-				<div className="right"></div>
-				<div className="devinnet-internet devinnet-flashes">
-					<span className="surrounded-2">in</span>
-					<div className="devinnet-slogan-disappear">ter</div>
-					<span className="surrounded-3">net</span>
+				<div
+					className={
+						scrollBarPosition > 2000
+							? 'right disappear-element'
+							: 'right appear-element'
+					}
+				>
+					<div className="devinnet-internet devinnet-flashes">
+						<span className="surrounded-2">in</span>
+						<div className="devinnet-slogan-disappear">ter</div>
+						<span className="surrounded-3">net</span>
+					</div>
 				</div>
 			</div>
-
-			{/* <p
-				className={
-					scrollBarPosition > 500
-						? 'description disappear-element'
-						: 'description appear-element'
-				}
-			>
-				<span className="surrounded">Dév</span>eloppons{' '}
-				<span className="surrounded">in</span>ter
-				<span className="surrounded">net</span>
-			</p> */}
 			<img
-				className={
-					scrollBarPosition > 100
-						? 'spiral disappear-element'
-						: 'spiral appear-element'
-				}
+				className={scrollBarPosition > 100 ? 'spiral-disappear' : 'spiral'}
 				src={spiral}
 				alt=""
 			/>
-			{/* <img
-				className={
-					scrollBarPosition > 600 && scrollBarPosition < 3050
-						? 'rectangle large-rectangle'
-						: 'rectangle appear-element'
-				}
-				src={rectangle}
-				alt=""
-			/> */}
 			<p
 				className={
-					scrollBarPosition > 650 && scrollBarPosition < 3050
+					scrollBarPosition > 5000 && scrollBarPosition < 20000
 						? 'specialisation-frontend appear-element'
 						: 'specialisation-frontend disappear-element'
 				}
 			>
-				Spécialisation Front-end
+				<span className="surrounded-appear">Développement</span> web
 			</p>
 			<p
 				className={
-					scrollBarPosition > 950 && scrollBarPosition < 2150
+					scrollBarPosition > 7000 && scrollBarPosition < 20000
 						? 'integration appear-element'
 						: 'integration disappear-element'
 				}
 			>
-				Intégration web
+				<span className="surrounded-appear">Solutions</span> adaptées
 			</p>
 			<p
 				className={
-					scrollBarPosition > 1250 && scrollBarPosition < 2150
+					scrollBarPosition > 9000 && scrollBarPosition < 20000
 						? 'template-dynamique appear-element'
 						: 'template-dynamique disappear-element'
 				}
 			>
-				Templates dynamique
+				Intégration <span className="surrounded-appear">Web</span>
 			</p>
 			<p
 				className={
-					scrollBarPosition > 1550 && scrollBarPosition < 2150
+					scrollBarPosition > 11000 && scrollBarPosition < 20000
 						? 'pixel-perfect appear-element'
 						: 'pixel-perfect disappear-element'
 				}
 			>
-				Pixel perfect
+				<span className="surrounded-appear">Qualité</span> de code
 			</p>
+
 			<p
 				className={
-					scrollBarPosition > 1850 && scrollBarPosition < 2150
-						? 'code-propre appear-element'
-						: 'code-propre disappear-element'
-				}
-			>
-				Code propre
-			</p>
-			<p
-				className={
-					scrollBarPosition > 2150 && scrollBarPosition < 3050
-						? 'experience appear-element'
-						: 'experience disappear-element'
-				}
-			>
-				Une équipe passionnés
-			</p>
-			<p
-				className={
-					scrollBarPosition > 2450 && scrollBarPosition < 3050
-						? 'avec-plus-de appear-element'
-						: 'avec-plus-de disappear-element'
-				}
-			>
-				avec plus de
-			</p>
-			<p
-				className={
-					scrollBarPosition > 2750 && scrollBarPosition < 3050
-						? 'passionnes appear-element'
-						: 'passionnes disappear-element'
-				}
-			>
-				10 ans d'experience
-			</p>
-			<p
-				className={
-					scrollBarPosition > 3100
+					scrollBarPosition > 20000
 						? 'contact appear-element'
 						: 'contact disappear-element'
 				}

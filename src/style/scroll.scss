@@ -4,15 +4,15 @@ $colorBg: #FA2472;
 $colorOutline: #ffffff;
 $colorOutlineFade: #ff82b0;
 
-$widthMouse: 2.5vmax;
-$heightMouse: 4vmax;
-$borderMouse: 0.3vmax;
+$widthMouse: 3.5vmax;
+$heightMouse: 6vmax;
+$borderMouse: 0.4vmax;
 
 $posMouse: 8px;
 $posText: 2px;
 
-$sizeTrackball: 10px;
-$posTrackball: 20px;
+$sizeTrackball: 0.6vmax;
+$posTrackball: 1.5vmax;
 $shrinkTrackball: 0.4;
 
 $animDuration: 8s;
@@ -31,13 +31,13 @@ $animDuration: 8s;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  bottom: 15%;
-  right: 15%;
-  font-size: 1.5vmax;
+  font-size: 2vmax;
+  bottom: 3vmax;
+  right: 3vmax;
 }
 
 .message {
-  margin-top: 20px;
+  margin-top: 1vmax;
   color: $colorOutline;
   animation:
     colorText $animDuration ease-out infinite,
