@@ -4,9 +4,9 @@ $colorBg: #FA2472;
 $colorOutline: #ffffff;
 $colorOutlineFade: #ff82b0;
 
-$widthMouse: 52px;
-$heightMouse: 88px;
-$borderMouse: 6px;
+$widthMouse: 2.5vmax;
+$heightMouse: 4vmax;
+$borderMouse: 0.3vmax;
 
 $posMouse: 8px;
 $posText: 2px;
@@ -15,7 +15,7 @@ $sizeTrackball: 10px;
 $posTrackball: 20px;
 $shrinkTrackball: 0.4;
 
-$animDuration: 5s;
+$animDuration: 8s;
 
 @mixin bgGradient {
   background:
@@ -33,6 +33,7 @@ $animDuration: 5s;
   justify-content: center;
   bottom: 15%;
   right: 15%;
+  font-size: 1.5vmax;
 }
 
 .message {
