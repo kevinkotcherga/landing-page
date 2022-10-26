@@ -6,7 +6,7 @@ const Scroll = ({ scrollBarPosition }) => {
 		let scroll = document.querySelector('.scroll');
 		scroll.classList.remove('disappear-element');
 		scroll.classList.add('appear-element');
-	}, 7000);
+	}, 13000);
 
 	return (
 		<div

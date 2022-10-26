@@ -13,20 +13,45 @@ const Home = () => {
 
 	setTimeout(() => {
 		let devinnetDeveloppons = document.querySelector('.devinnet-developpons');
-		devinnetDeveloppons.classList.remove('devinnet-developpons');
-		devinnetDeveloppons.classList.remove('devinnet-flashes');
-		devinnetDeveloppons.classList.add('devinnet-developpons-move');
 		let devinnetInternet = document.querySelector('.devinnet-internet');
-		devinnetInternet.classList.remove('devinnet-internet');
-		devinnetInternet.classList.remove('devinnet-flashes');
+		let surrounded = document.querySelector('.surrounded');
+		let surrounded2 = document.querySelector('.surrounded-2');
+		let surrounded3 = document.querySelector('.surrounded-3');
+		devinnetDeveloppons.classList.remove(
+			'devinnet-developpons',
+			'devinnet-flashes',
+		);
+		devinnetDeveloppons.classList.add('devinnet-developpons-move');
+		devinnetInternet.classList.remove('devinnet-internet', 'devinnet-flashes');
 		devinnetInternet.classList.add('devinnet-internet-move');
+		surrounded.classList.add('surrounded-disappear');
+		surrounded2.classList.add('surrounded-disappear');
+		surrounded3.classList.add('surrounded-disappear');
 	}, 3000);
 
 	setTimeout(() => {
 		let devinnetSlogan = document.querySelector('.devinnet-slogan-disappear');
-		devinnetSlogan.classList.add('devinnet-slogan-appear');
 		devinnetSlogan.classList.remove('devinnet-slogan-disappear');
-	}, 5000);
+		devinnetSlogan.classList.add('devinnet-slogan-appear');
+	}, 8000);
+
+	setTimeout(() => {
+		let surrounded = document.querySelector('.surrounded');
+		surrounded.classList.remove('surrounded-disappear');
+		surrounded.classList.add('surrounded-appear');
+	}, 11000);
+
+	setTimeout(() => {
+		let surrounded2 = document.querySelector('.surrounded-2');
+		surrounded2.classList.remove('surrounded-disappear');
+		surrounded2.classList.add('surrounded-appear');
+	}, 11500);
+
+	setTimeout(() => {
+		let surrounded3 = document.querySelector('.surrounded-3');
+		surrounded3.classList.remove('surrounded-disappear');
+		surrounded3.classList.add('surrounded-appear');
+	}, 12000);
 
 	return (
 		<div id="home" className="home">
@@ -37,14 +62,19 @@ const Home = () => {
 						: 'rectangle appear-element'
 				}
 			>
+				<div className="top"></div>
+				<div className="bottom"></div>
 				<div className="left">
 					<div className="devinnet-developpons devinnet-flashes">
-						Dev<div className="devinnet-slogan-disappear">eloppons</div>
+						<span className="surrounded">Dev</span>
+						<div className="devinnet-slogan-disappear">eloppons</div>
 					</div>
 				</div>
 				<div className="right"></div>
 				<div className="devinnet-internet devinnet-flashes">
-					in<div className="devinnet-slogan-disappear">ter</div>net
+					<span className="surrounded-2">in</span>
+					<div className="devinnet-slogan-disappear">ter</div>
+					<span className="surrounded-3">net</span>
 				</div>
 			</div>
 
