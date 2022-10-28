@@ -1,17 +1,14 @@
 import React from 'react';
 import '../style/scroll.scss';
+import { setScrollAppear } from '../utils/animationHome/setScrollAppear';
 
 const Scroll = ({ scrollBarPosition }) => {
-	let timeout = setTimeout(() => {
-		let scroll = document.querySelector('.scroll');
-		scroll.classList.remove('disappear-element');
-		scroll.classList.add('appear-element');
-	}, 12000);
+	setTimeout(setScrollAppear, 16000);
 
 	return (
 		<div
 			className={
-				scrollBarPosition < 7000 && timeout
+				scrollBarPosition < 7000
 					? 'scroll disappear-element'
 					: 'scroll disappear-element'
 			}
