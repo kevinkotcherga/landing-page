@@ -32,6 +32,22 @@ body::-webkit-scrollbar {
   transition: opacity 1s;
 }
 
+.appear-slogan {
+  visibility: visible;
+  overflow: hidden;
+  width: 1;
+  transition: width 5s;
+}
+
+.disappear-slogan {
+  width: 0;
+  visibility: hidden;
+}
+
+.margin-slogan {
+  margin-right: 1vw;
+}
+
 .display-none {
   display: none;
 }
@@ -199,117 +215,106 @@ body::-webkit-scrollbar {
     opacity: 0;
     transition: 0.5s;
   }
-  // .slogan-container {
-  //   position: fixed;
-  //   display: flex;
-  //   height: 80vh;
-  //   width: 80vw;
-  //   top: 50%;
-  //   left: 50%;
-  //   transform: translate(-50%, -50%);
-  //   &__box {
-  //     &-1 {
-  //       align-items: center;
-  //       position: relative;
-  //       display: flex;
-  //       height: 100%;
-  //       flex: 1;
-  //       background-color: blue;
-  //       &-slogan {
-  //         transform: translate(18vw, -10vw);
-  //         font-size: 2vw;
-  //         display: flex;
-  //         align-items: center;
-  //         z-index: 99;
-  //         .preposition {
-  //           position: absolute;
-  //           right: 1vw;
-  //         }
-  //       }
-  //       &-slogan-move {
-  //         transform: translate(0, 0);
-  //         font-size: 2vw;
-  //         display: flex;
-  //         align-items: center;
-  //         z-index: 99;
-  //         transition: transform 5s ease-in-out;
-  //         .preposition {
-  //           position: absolute;
-  //           right: 1vw;
-  //         }
-  //       }
-  //     }
-  //     &-2 {
-  //       align-items: center;
-  //       position: relative;
-  //       display: flex;
-  //       height: 100%;
-  //       flex: 1;
-  //       background-color: darkblue;
-  //       &-slogan {
-  //         transform: translate(18vw, -10vw);
-  //         font-size: 2vw;
-  //         display: flex;
-  //         align-items: center;
-  //         z-index: 99;
-  //       }
-  //       &-slogan-move {
-  //         transform: translate(0, 0);
-  //         font-size: 2vw;
-  //         display: flex;
-  //         align-items: center;
-  //         z-index: 99;
-  //         transition: transform 5s ease-in-out;
-  //       }
-  //     }
-  //     &-3 {
-  //       align-items: center;
-  //       position: relative;
-  //       display: flex;
-  //       height: 100%;
-  //       flex: 1;
-  //       background-color: green;
-  //       &-slogan {
-  //         transform: translate(-11vw, 11vw);
-  //         font-size: 2vw;
-  //         display: flex;
-  //         align-items: center;
-  //         z-index: 99;
-  //       }
-  //       &-slogan-move {
-  //         transform: translate(0, 0);
-  //         font-size: 2vw;
-  //         display: flex;
-  //         align-items: center;
-  //         z-index: 99;
-  //         transition: transform 5s ease-in-out;
-  //       }
-  //     }
-  //     &-4 {
-  //       align-items: center;
-  //       position: relative;
-  //       display: flex;
-  //       height: 100%;
-  //       flex: 1;
-  //       background-color: orange;
-  //       &-slogan {
-  //         transform: translate(-11vw, 11vw);
-  //         font-size: 2vw;
-  //         display: flex;
-  //         align-items: center;
-  //         z-index: 99;
-  //       }
-  //       &-slogan-move {
-  //         transform: translate(0, 0);
-  //         font-size: 2vw;
-  //         display: flex;
-  //         align-items: center;
-  //         z-index: 99;
-  //         transition: transform 5s ease-in-out;
-  //       }
-  //     }
-  //   }
-  // }
+  .slogan-container {
+    position: fixed;
+    display: flex;
+    height: 80vh;
+    width: 80vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &__box {
+      &-1 {
+        align-items: center;
+        position: relative;
+        display: flex;
+        height: 100%;
+        flex: 1;
+        &-slogan {
+          transform: translate(10vw, -15vw);
+          display: flex;
+          align-items: center;
+          z-index: 99;
+          font-size: 3vw;
+        }
+        &-slogan-move {
+          transform: translate(0, 0);
+          display: flex;
+          align-items: center;
+          z-index: 99;
+          transition: transform 5s, font-size 5s ease-in-out;
+          font-size: 2.38vw;
+        }
+      }
+      &-2 {
+        align-items: center;
+        position: relative;
+        display: flex;
+        height: 100%;
+        flex: 1;
+        &-slogan {
+          transform: translate(-15vw, 10vw);
+          display: flex;
+          align-items: center;
+          z-index: 99;
+          font-size: 2.5vw;
+        }
+        &-slogan-move {
+          font-size: 2.38vw;
+          transform: translate(0, 0);
+          display: flex;
+          align-items: center;
+          z-index: 99;
+          transition: transform 5s, font-size 5s ease-in-out;
+        }
+      }
+      &-3 {
+        align-items: center;
+        position: relative;
+        display: flex;
+        height: 100%;
+        flex: 1;
+        &-slogan {
+          transform: translate(-10vw, -10vw);
+          display: flex;
+          align-items: center;
+          z-index: 99;
+          font-size: 3vw;
+        }
+        &-slogan-move {
+          font-size: 2.38vw;
+          transform: translate(0, 0);
+          display: flex;
+          align-items: center;
+          z-index: 99;
+          transition: transform 5s ease-in-out;
+        }
+      }
+      &-4 {
+        align-items: center;
+        position: relative;
+        display: flex;
+        height: 100%;
+        flex: 1;
+
+        &-slogan {
+          font-size: 3vw;
+          transform: translate(-20vw, -20vw);
+          display: flex;
+          align-items: center;
+          z-index: 99;
+        }
+        &-slogan-move {
+          font-size: 2.38vw;
+          transform: translate(0, 0);
+          display: flex;
+          align-items: center;
+          z-index: 99;
+          transition: transform 5s ease-in-out;
+        }
+      }
+    }
+  }
   .contact {
     position: absolute;
     top: 25%;

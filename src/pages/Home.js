@@ -72,32 +72,60 @@ const Home = () => {
 				alt=""
 			/>
 			{/* PAGE 2 */}
-			{/* <div className="slogan-container">
+			<div className="slogan-container">
 				<div className="slogan-container__box-1">
-					<p className="slogan-container__box-1-slogan">
-						<span className="surrounded-slogan">Développement</span>{' '}
-						<span className="">web</span>
-						<span className="display-none">de</span>
+					<p
+						className={
+							scrollBarPosition > 6000
+								? 'slogan-container__box-1-slogan appear-element'
+								: 'slogan-container__box-1-slogan disappear-element'
+						}
+					>
+						<span className="surrounded-slogan margin-slogan">
+							Développement
+						</span>
+						<span className="appear-slogan">web</span>
+						<span className="disappear-slogan">de</span>
 					</p>
 				</div>
 				<div className="slogan-container__box-2">
-					<p className="slogan-container__box-2-slogan">
-						<span className="surrounded-slogan">Solutions</span>{' '}
-						<span className="">adaptées</span>
+					<p
+						className={
+							scrollBarPosition > 8000
+								? 'slogan-container__box-2-slogan appear-element'
+								: 'slogan-container__box-2-slogan disappear-element'
+						}
+					>
+						<span className="surrounded-slogan margin-slogan">Solutions</span>
+						<span className="disappear-slogan">adaptées</span>
 					</p>
 				</div>
 				<div className="slogan-container__box-3">
-					<p className="slogan-container__box-3-slogan">
-						<span className="">Intégration</span> <span className="">Web</span>
-						<span className="display-none">de</span>
+					<p
+						className={
+							scrollBarPosition > 10000
+								? 'slogan-container__box-3-slogan appear-element'
+								: 'slogan-container__box-3-slogan disappear-element'
+						}
+					>
+						<span className="disappear-slogan">Intégration</span>
+						<span className="margin-slogan">Web</span>
+						<span className="appear-slogan margin-slogan">de</span>
 					</p>
 				</div>
 				<div className="slogan-container__box-4">
-					<p className="slogan-container__box-4-slogan">
-						<span className="">Qualité</span> <span className="">de code</span>
+					<p
+						className={
+							scrollBarPosition > 12000
+								? 'slogan-container__box-4-slogan appear-element'
+								: 'slogan-container__box-4-slogan disappear-element'
+						}
+					>
+						<span className="">Qualité</span>
+						<span className="disappear-slogan">de code</span>
 					</p>
 				</div>
-			</div> */}
+			</div>
 			<p
 				className={
 					scrollBarPosition > 20000
