@@ -1,5 +1,5 @@
 export const setFirstSurround = () => {
-	const surrounded = document.querySelector('.container-devinnet__surrounded');
+	const surrounded = document.querySelector('.surrounded');
 	const sloganDeveloppons = document.querySelector(
 		'.container-devinnet__slogan-developpons-appear',
 	);
@@ -14,6 +14,6 @@ export const setFirstSurround = () => {
 	sloganDeveloppons.classList.add(
 		'container-devinnet__slogan-developpons-stop',
 	);
-	surrounded.classList.remove('container-devinnet__surrounded-disappear');
-	surrounded.classList.add('container-devinnet__surrounded-appear');
+	surrounded.classList.remove('surrounded-disappear');
+	surrounded.classList.add('surrounded-appear');
 };

@@ -3,7 +3,7 @@
 @import './_mixins.scss';
 
 body {
-  height: 21000px;
+  height: 20000px;
   overflow-y: scroll;
   text-transform: uppercase;
   /* for Internet Explorer, Edge */
@@ -24,7 +24,7 @@ body::-webkit-scrollbar {
 
 .appear-element {
   opacity: 1;
-  transition: opacity 1s;
+  transition: opacity 1.5s;
 }
 
 .disappear-element {
@@ -32,24 +32,50 @@ body::-webkit-scrollbar {
   transition: opacity 1s;
 }
 
-.appear-slogan {
-  visibility: visible;
-  overflow: hidden;
-  width: 1;
-  transition: width 5s;
-}
-
-.disappear-slogan {
-  width: 0;
-  visibility: hidden;
-}
-
 .margin-slogan {
   margin-right: 1vw;
 }
 
 .display-none {
-  display: none;
+  display: none !important;
+}
+
+.display-block {
+  display: block;
+}
+
+.preposition-element {
+  &-disappear {
+  width: 0;
+  visibility: hidden;
+  }
+  &-appear {
+    visibility: visible;
+    overflow: hidden;
+    width: 4vw;
+    transition: width 5s;
+    margin-right: 1vw;
+  }
+}
+
+.surrounded {
+  &-disappear {
+    padding: 2px 10px;
+    transition: padding 5s ease-in-out;
+  }
+
+  &-appear {
+    border: 0.4vmax solid white;
+    border-radius: 2.5vmax;
+    padding: 2px 10px;
+    transition: border 0.2s ease-in-out;
+  }
+
+  &-stop {
+    border: 0.4vmax solid white;
+    border-radius: 2.5vmax;
+    padding: 2px 10px;
+  }
 }
 
 .main-container {
@@ -171,24 +197,8 @@ body::-webkit-scrollbar {
           }
         }
       }
-      &__surrounded {
-        &-disappear {
-          padding: 2px 10px;
-          transition: padding 5s ease-in-out;
-        }
-        &-appear {
-          border: 0.4vmax solid white;
-          border-radius: 2.5vmax;
-          padding: 2px 10px;
-          transition: border 0.2s ease-in-out;
-        }
-        &-stop {
-          border: 0.4vmax solid white;
-          border-radius: 2.5vmax;
-          padding: 2px 10px;
-        }
-      }
     }
+
     .flashing-text {
       animation-duration: 1s;
       animation-name: clignoter;
@@ -209,12 +219,14 @@ body::-webkit-scrollbar {
       }
     }
   }
+
   .home__large-rectangle {
     height: 110vh;
     width: 110vw;
     opacity: 0;
     transition: 0.5s;
   }
+
   .slogan-container {
     position: fixed;
     display: flex;
@@ -223,6 +235,7 @@ body::-webkit-scrollbar {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    // background-color: blue;
     &__box {
       &-1 {
         align-items: center;
@@ -231,7 +244,7 @@ body::-webkit-scrollbar {
         height: 100%;
         flex: 1;
         &-slogan {
-          transform: translate(10vw, -15vw);
+          transform: translate(5vw, -18vw);
           display: flex;
           align-items: center;
           z-index: 99;
@@ -243,7 +256,7 @@ body::-webkit-scrollbar {
           align-items: center;
           z-index: 99;
           transition: transform 5s, font-size 5s ease-in-out;
-          font-size: 2.38vw;
+          font-size: 2.1vw;
         }
       }
       &-2 {
@@ -253,14 +266,14 @@ body::-webkit-scrollbar {
         height: 100%;
         flex: 1;
         &-slogan {
-          transform: translate(-15vw, 10vw);
+          transform: translate(-45vw, 6vw);
           display: flex;
           align-items: center;
           z-index: 99;
           font-size: 2.5vw;
         }
         &-slogan-move {
-          font-size: 2.38vw;
+          font-size: 2.1vw;
           transform: translate(0, 0);
           display: flex;
           align-items: center;
@@ -275,14 +288,14 @@ body::-webkit-scrollbar {
         height: 100%;
         flex: 1;
         &-slogan {
-          transform: translate(-10vw, -10vw);
+          transform: translate(-42vw, -7vw);
           display: flex;
           align-items: center;
           z-index: 99;
           font-size: 3vw;
         }
         &-slogan-move {
-          font-size: 2.38vw;
+          font-size: 2.1vw;
           transform: translate(0, 0);
           display: flex;
           align-items: center;
@@ -299,13 +312,13 @@ body::-webkit-scrollbar {
 
         &-slogan {
           font-size: 3vw;
-          transform: translate(-20vw, -20vw);
+          transform: translate(-76vw, 13vw);
           display: flex;
           align-items: center;
           z-index: 99;
         }
         &-slogan-move {
-          font-size: 2.38vw;
+          font-size: 2.1vw;
           transform: translate(0, 0);
           display: flex;
           align-items: center;
@@ -315,11 +328,77 @@ body::-webkit-scrollbar {
       }
     }
   }
+
+  .slogan-element {
+    opacity: 1;
+    transition: opacity 1s;
+
+    &-web {
+      visibility: visible;
+      overflow: hidden;
+      width: 9vw;
+      transition: width 5s;
+    }
+
+    &-adaptees {
+      visibility: visible;
+      overflow: hidden;
+      width: 18vw;
+      transition: width 5s;
+    }
+
+    &-integration {
+      visibility: visible;
+      overflow: hidden;
+      width: 27vw;
+      transition: width 5s;
+    }
+
+    &-de {
+      visibility: visible;
+      overflow: hidden;
+      width: 5vw;
+      transition: width 5s;
+    }
+
+    &-code {
+      visibility: visible;
+      overflow: hidden;
+      width: 11vw;
+      transition: width 5s;
+    }
+
+    &-disappear {
+      width: 0;
+      visibility: hidden;
+    }
+  }
+
   .contact {
-    position: absolute;
-    top: 25%;
-    left: 25%;
-    font-size: 4vw;
-    width: 20vw;
+    display: flex;
+    gap: 1vw;
+    font-size: 1.3vw;
+    &__start-talk {
+      opacity: 0.85;
+      background: white;
+      color: rgb(255, 119, 0);
+      padding: 0.8vw 1.3vw;
+      cursor: pointer;
+      border: solid 0.2vw white;
+      &:hover {
+        opacity: 1;
+        transition: opacity 0.3s ease-in;
+      }
+    }
+    &__find-out-more {
+      padding: 0.8vw 1.3vw;
+      cursor: pointer;
+      border: solid 0.2vw white;
+      color: rgba(255, 255, 255, 0.85);
+      &:hover {
+        color: rgb(255, 255, 255);
+        transition: color 0.3s ease-in;
+      }
+    }
   }
 }
