@@ -1,5 +1,5 @@
 export const setScrollAppear = () => {
 	let scroll = document.querySelector('.scroll');
-	scroll.classList.remove('disappear-element');
-	scroll.classList.add('appear-element');
+	scroll.classList.remove('disappear-scroll');
+	scroll.classList.add('appear-scroll');
 };

@@ -42,12 +42,12 @@ const Home = () => {
 		sloganCode.classList.add('slogan-element-disappear');
 
 		let sloganDisappear = document.querySelectorAll(
-			'.preposition-element-disappear',
+			'.preposition-element-de-disappear',
 		);
 
 		sloganDisappear.forEach(function (slogan) {
-			slogan.classList.remove('preposition-element-disappear');
-			slogan.classList.add('preposition-element-appear');
+			slogan.classList.remove('preposition-element-de-disappear');
+			slogan.classList.add('preposition-element-de-appear');
 		});
 
 		const firstSlogan = document.querySelector(
@@ -136,7 +136,7 @@ const Home = () => {
 								: 'contact disappear-element display-none'
 						}
 					>
-						<div className="contact__start-talk">Démarons la discussion</div>
+						<div className="contact__start-talk">Démarrons la discussion</div>
 						<div className="contact__find-out-more">En savoir plus</div>
 					</div>
 				</div>
@@ -167,7 +167,7 @@ const Home = () => {
 							Développement
 						</span>
 						<span className="slogan-element-web">web</span>
-						<span className="preposition-element-disappear margin-slogan">
+						<span className="preposition-element-de-disappear margin-slogan">
 							de
 						</span>
 					</p>
@@ -196,7 +196,7 @@ const Home = () => {
 							Intégration
 						</span>
 						<span className="surrounded-appear margin-slogan">Web</span>
-						<span className="preposition-element-disappear margin-slogan">
+						<span className="preposition-element-de-disappear margin-slogan">
 							de
 						</span>
 					</p>

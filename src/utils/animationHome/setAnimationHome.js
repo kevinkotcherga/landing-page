@@ -9,7 +9,7 @@ import { setThirdSurround } from './setThirdSurround';
 export const setAnimationHome = () => {
 	setTimeout(setLogo, 3000);
 	setTimeout(setSloganDeveloppons, 9000);
-	setTimeout(setSloganInternet, 10000);
+	setTimeout(setSloganInternet, 9500);
 	setTimeout(setFirstSurround, 14000);
 	setTimeout(setSecondSurround, 14500);
 	setTimeout(setThirdSurround, 15000);

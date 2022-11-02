@@ -27,7 +27,17 @@ body::-webkit-scrollbar {
   transition: opacity 1.5s;
 }
 
+.appear-scroll {
+  opacity: 1;
+  transition: opacity 1.5s;
+}
+
 .disappear-element {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.disappear-scroll {
   opacity: 0;
   transition: opacity 1s;
 }
@@ -56,25 +66,72 @@ body::-webkit-scrollbar {
     transition: width 5s;
     margin-right: 1vw;
   }
+  &-de-disappear {
+    opacity: 0;
+    width: 0vw;
+    visibility: visible;
+    overflow: hidden;
+  }
+
+  // &-de-appear {
+  //   opacity: 1;
+  //   width: 5vw;
+  //   visibility: visible;
+  //   overflow: hidden;
+  //   transition: width 5s, opacity 5s;
+  // }
+
+  &-de-appear {
+    -webkit-animation: cssAnimation 5s forwards;
+    animation: cssAnimation 5s forwards;
+  }
+
+  @keyframes cssAnimation {
+    0% {
+      opacity: 0;
+    }
+
+    90% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes cssAnimation {
+    0% {
+      opacity: 0;
+    }
+
+    90% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
 }
 
 .surrounded {
   &-disappear {
-    padding: 2px 10px;
+    padding: 0.2vw 0.5vw;
     transition: padding 5s ease-in-out;
   }
 
   &-appear {
-    border: 0.4vmax solid white;
-    border-radius: 2.5vmax;
-    padding: 2px 10px;
+    border: 0.4vw solid white;
+    border-radius: 2.5vw;
+    padding: 0.2vw 0.5vw;
     transition: border 0.2s ease-in-out;
   }
 
   &-stop {
     border: 0.4vmax solid white;
     border-radius: 2.5vmax;
-    padding: 2px 10px;
+    padding: 0.2vw 0.5vw;
   }
 }
 
@@ -171,7 +228,7 @@ body::-webkit-scrollbar {
             visibility: visible;
             overflow: hidden;
             width: 39vw;
-            transition: width 5s;
+            transition: width 5s ease-in-out;
           }
           &-stop {
             visibility: visible;
@@ -188,7 +245,7 @@ body::-webkit-scrollbar {
             visibility: visible;
             overflow: hidden;
             width: 12.7vw;
-            transition: width 4s;
+            transition: width 3s ease-in-out;
           }
           &-stop {
             visibility: visible;
@@ -244,7 +301,7 @@ body::-webkit-scrollbar {
         height: 100%;
         flex: 1;
         &-slogan {
-          transform: translate(5vw, -18vw);
+          transform: translate(4vw, -11vw);
           display: flex;
           align-items: center;
           z-index: 99;
@@ -266,7 +323,7 @@ body::-webkit-scrollbar {
         height: 100%;
         flex: 1;
         &-slogan {
-          transform: translate(-45vw, 6vw);
+          transform: translate(-50vw, 4vw);
           display: flex;
           align-items: center;
           z-index: 99;
@@ -288,7 +345,7 @@ body::-webkit-scrollbar {
         height: 100%;
         flex: 1;
         &-slogan {
-          transform: translate(-42vw, -7vw);
+          transform: translate(-46vw, -2vw);
           display: flex;
           align-items: center;
           z-index: 99;
@@ -309,10 +366,9 @@ body::-webkit-scrollbar {
         display: flex;
         height: 100%;
         flex: 1;
-
         &-slogan {
           font-size: 3vw;
-          transform: translate(-76vw, 13vw);
+          transform: translate(-92vw, 11vw);
           display: flex;
           align-items: center;
           z-index: 99;
@@ -337,6 +393,7 @@ body::-webkit-scrollbar {
       visibility: visible;
       overflow: hidden;
       width: 9vw;
+      opacity: 1;
       transition: width 5s;
     }
 
@@ -358,6 +415,7 @@ body::-webkit-scrollbar {
       visibility: visible;
       overflow: hidden;
       width: 5vw;
+      opacity: 1;
       transition: width 5s;
     }
 
@@ -369,8 +427,11 @@ body::-webkit-scrollbar {
     }
 
     &-disappear {
-      width: 0;
-      visibility: hidden;
+      opacity: 0;
+      width: 0vw;
+      visibility: visible;
+      overflow: hidden;
+      transition: width 5s, opacity 1s;
     }
   }
 
@@ -398,6 +459,166 @@ body::-webkit-scrollbar {
       &:hover {
         color: rgb(255, 255, 255);
         transition: color 0.3s ease-in;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+.appear-scroll {
+    opacity: 0;
+  }
+
+  .main-container {
+    .spiral {
+      opacity: 0;
+      z-index: 2;
+      width: 200%;
+      height: auto;
+      }
+
+    .contact {
+      display: flex;
+      flex-direction: column;
+      gap: 5vw;
+      font-size: 2.5vw;
+      text-align: center;
+      &__start-talk {
+        opacity: 0.85;
+        background: white;
+        color: rgb(255, 119, 0);
+        padding: 1.8vw 1.3vw;
+        cursor: pointer;
+        border: solid 0.2vw white;
+
+        &:hover {
+          opacity: 1;
+          transition: opacity 0.3s ease-in;
+        }
+      }
+
+      &__find-out-more {
+        padding: 1.8vw 1.3vw;
+        cursor: pointer;
+        border: solid 0.2vw white;
+        color: rgba(255, 255, 255, 0.85);
+
+        &:hover {
+          color: rgb(255, 255, 255);
+          transition: color 0.3s ease-in;
+        }
+      }
+    }
+    .slogan-container {
+      display: flex;
+      flex-direction: column;
+    &__box {
+        &-1 {
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          display: flex;
+          height: 100%;
+          flex: 1;
+          // background-color: blue;
+
+          &-slogan {
+            transform: translate(0, 0);
+            display: flex;
+            align-items: center;
+            z-index: 99;
+            font-size: 3vw;
+          }
+
+          &-slogan-move {
+            transform: translate(0, 0);
+            display: flex;
+            align-items: center;
+            z-index: 99;
+            transition: transform 5s, font-size 5s ease-in-out;
+            font-size: 3vw;
+          }
+        }
+
+        &-2 {
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          display: flex;
+          height: 100%;
+          flex: 1;
+          // background-color: blueviolet;
+
+          &-slogan {
+            transform: translate(0, 0);
+            display: flex;
+            align-items: center;
+            z-index: 99;
+            font-size: 3vw;
+          }
+
+          &-slogan-move {
+            font-size: 3vw;
+            transform: translate(0, 0);
+            display: flex;
+            align-items: center;
+            z-index: 99;
+            transition: transform 5s, font-size 5s ease-in-out;
+          }
+        }
+
+        &-3 {
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          display: flex;
+          height: 100%;
+          flex: 1;
+          // background-color: green;
+
+          &-slogan {
+            transform: translate(0, 0);
+            display: flex;
+            align-items: center;
+            z-index: 99;
+            font-size: 3vw;
+          }
+
+          &-slogan-move {
+            font-size: 3vw;
+            transform: translate(0, 0);
+            display: flex;
+            align-items: center;
+            z-index: 99;
+            transition: transform 5s ease-in-out;
+          }
+        }
+
+        &-4 {
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          display: flex;
+          height: 100%;
+          flex: 1;
+          // background-color: darkgreen;
+          &-slogan {
+            font-size: 3vw;
+            transform: translate(0, 0);
+            display: flex;
+            align-items: center;
+            z-index: 99;
+          }
+
+          &-slogan-move {
+            font-size: 3vw;
+            transform: translate(0, 0);
+            display: flex;
+            align-items: center;
+            z-index: 99;
+            transition: transform 5s ease-in-out;
+          }
+        }
       }
     }
   }
